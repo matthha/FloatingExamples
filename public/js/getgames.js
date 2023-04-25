@@ -1,9 +1,10 @@
+// import { updatePosition } from "./float.js"
 tt = document.querySelector('.top')
 const makeFav = (b) => {
     localStorage.setItem('my.fav', JSON.stringify(b));
 }
 
-const myFunc = (a) => {
+const myFunc = (a,i) => {
     const d = document.createElement('div')
     const h = document.createElement('h2')
     const c2 = document.createElement('div')
@@ -12,13 +13,27 @@ const myFunc = (a) => {
     const p = document.createElement('p')
     const im = document.createElement('img')
     const bt = document.createElement('button')
+    const ft = document.createElement('div')
 // card creator
     tt.appendChild(d)
-    d.className="card"
+    d.className="card parent"
 // img in first box
     d.appendChild(im)
     im.src=a['imgl']
     im.alt='Box art for '+a['game']
+
+    d.appendChild(ft)
+    ft.textContent='Tooltip for '+a['game']
+    ft.className='tooltip'
+    // d.addEventListener('mouseenter', (e) =>{
+    //     // updatePosition(d,ft)
+    //     ft.className='hide'
+    //     d.className='card parent'
+        
+    // })
+    // d.addEventListener('mouseleave', (e) =>{
+    //     ft.className='tooltip'
+    // })
 // 2nd box
     d.appendChild(c2)
     c2.className='car'

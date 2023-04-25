@@ -1,13 +1,33 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Floating Example</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel='stylesheet' href="./css/style.css">
+    <!-- star Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Float Example</title>
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
+    <a class="skipper" href="#mainthing">Skip to Main Content</a>
+    <nav>
+        <ul>
+            <!-- <a href="index.html"><li>Home</li></a> -->
+            <a href="index.html"><li class = "current">Games</li></a>
+            <!-- <a href="about.html"><li>About Me</li></a> -->
+        </ul>
+    </nav>
+    <div class="title" id="mainthing">Top 20 PS5 Games</div>
+    <div class="info">Click the star Icon to set your favorite game on the Home page.</div>
+    <div class="top"></div>
 
+    <script src="./js/getgames.js" defer></script>
+    <script src="./js/gamelist.js" defer></script>
+    <script src="./js/float.js" type="module" defer></script>
+</body>
 </html>

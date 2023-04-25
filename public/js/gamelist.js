@@ -183,5 +183,5 @@ Bring your favorite co-op partner and together step into the shoes of May and Co
 
 // const mapAbbreviationArrayCallback = () => 
 //   sendToJumbotron(stateCapitals.map((item)=> item.stateAbbrev));
-const mapit = () => games.map((it)=> myFunc(it));
+const mapit = () => games.map((it,index)=> myFunc(it,index));
 mapit()
