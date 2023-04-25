@@ -1,11 +1,9 @@
-import {computePosition, autoUpdate, shift, flip, offset} from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.5/+esm';
-        // debugger
+import {computePosition, shift, flip, offset} from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.5/+esm';
         const parents = document.querySelectorAll('.parent');
         const tooltips = document.querySelectorAll('.tooltip');
 
         parents.forEach((element, index) => {
-            // console.log(parents[index])
-        const thing = parents[index]
+        const parent = parents[index]
         const tooltip = tooltips[index]
 
         function updatePosition(a,b) {
@@ -20,23 +18,21 @@ import {computePosition, autoUpdate, shift, flip, offset} from 'https://cdn.jsde
                 });
             }
 
-        computePosition(thing, tooltip, {
-            placement: 'left',
-            middleware: [offset(12),shift(),flip()],
-        }).then(({x, y}) => {
-                Object.assign(tooltip.style, {
-                    left: `${x}px`,
-                    top: `${y}px`,
-                });
-            });
-            // d.addEventListener('mouseleave', (e) =>{
-            //     ft.className='tooltip'
-            // })
-        thing.addEventListener('mouseenter', (e) =>{
-            updatePosition(thing, tooltip)
+        // computePosition(parent, tooltip, {
+        //     placement: 'left',
+        //     middleware: [offset(12),shift(),flip()],
+        // }).then(({x, y}) => {
+        //         Object.assign(tooltip.style, {
+        //             left: `${x}px`,
+        //             top: `${y}px`,
+        //         });
+        //     });
+
+        parent.addEventListener('mouseenter', () =>{
+            updatePosition(parent, tooltip)
             tooltip.style.display='block'
         })
-        thing.addEventListener('mouseleave', (e) =>{
+        parent.addEventListener('mouseleave', () =>{
             tooltip.style.display='none'
         })
         
